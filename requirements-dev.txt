@@ -1,0 +1,5 @@
+# Dependências de desenvolvimento para testes e qualidade de código
+# Para instalar manualmente no seu ambiente virtual:
+# pip install -r requirements-dev.txt
+
+pytest>=8.0.0
