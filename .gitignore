@@ -1,0 +1,48 @@
+# Ambientes virtuais (Virtual environments)
+.venv/
+venv/
+env/
+ENV/
+
+# Bytecodes e cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Testes e cobertura de código
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs e arquivos de execução
+*.log
+
+# Variáveis de ambiente e segredos
+.env
+.env.local
+
+# Bancos de dados locais / SQLite
+*.sqlite
+*.sqlite3
+*.db
+
+# Arquivos de dados (evita versionar arquivos pesados de dados)
+# Mantendo os arquivos .gitkeep explicitamente rastreados
+data/raw/*
+!data/raw/.gitkeep
+data/refined/*
+!data/refined/.gitkeep
+data/marts/*
+!data/marts/.gitkeep
+
+# Garantia de rastreamento para arquivos .gitkeep
+!.gitkeep
+
+# Arquivos gerados pelo sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Configurações de editores e IDEs
+.vscode/
+.idea/
