@@ -16,6 +16,20 @@ Construir e documentar um pipeline de engenharia de dados que:
 
 ---
 
+## 📊 Fonte de Dados e Escopo
+
+- **Conjunto de Dados:** [Football Data from Transfermarkt](https://www.kaggle.com/datasets/davidcariboo/player-scores)
+- **Autor:** David Cariboo ([repositório no GitHub: dcaribou/transfermarkt-datasets](https://github.com/dcaribou/transfermarkt-datasets))
+- **Licença Declarada dos Dados:** **CC0: Public Domain (CC0-1.0)**, tanto na página do Kaggle quanto no repositório de origem no GitHub.
+- **Arquivos Selecionados:** O pipeline utilizará exclusivamente os arquivos:
+  - `games.csv`
+  - `clubs.csv`
+  - `competitions.csv`
+- **Status das Atualizações e Recorte Temporal:** As atualizações da base estão pausadas pelo autor, com os dados disponíveis cobrindo o histórico até **6 de julho de 2026**.
+- **Validação Estrutural e de Chaves:** As chaves de relacionamento identificadas preliminarmente (`competition_id`, `club_id`, `game_id`) não foram consideradas como validadas previamente; a consistência e integridade das chaves serão conferidas empiricamente nos dados reais após a etapa de download.
+
+---
+
 ## 📁 Estrutura do Projeto
 
 ```text
@@ -47,6 +61,15 @@ pipeline_futebol/
 
 ---
 
+## 🛠️ Tecnologias Previstas
+
+- **Python 3** (Processamento, automação e orquestração)
+- **SQL / SQLite** (Modelagem relacional e consultas analíticas)
+- **pytest** (Testes automatizados unitários e de qualidade de dados)
+- **Git** (Controle de versão passo a passo)
+
+---
+
 ## 🤖 Registro de Suposições, Erros e Correções da IA
 
 Conforme diretriz do projeto acadêmico, esta seção registra ocorrências em que suposições, divergências de instruções ou falhas foram identificadas durante o desenvolvimento assistido por IA:
@@ -54,12 +77,4 @@ Conforme diretriz do projeto acadêmico, esta seção registra ocorrências em q
 | ID | Situação Identificada | Suposição / Risco | Como foi Identificado | Ação Corretiva Realizada |
 |---|---|---|---|---|
 | 01 | Nomenclatura da pasta do projeto (`pipeline-futebol` vs. `pipeline_futebol`). | Desencontro de instruções entre orientação prévia do assistente e a pasta aberta. | Verificação do caminho do diretório antes de iniciar as operações. | Alinhamento com o usuário, confirmando o uso de `pipeline_futebol`. |
-
----
-
-## 🛠️ Tecnologias Previstas
-
-- **Python 3** (Processamento, automação e orquestração)
-- **SQL / SQLite** (Modelagem relacional e consultas analíticas)
-- **pytest** (Testes automatizados unitários e de qualidade de dados)
-- **Git** (Controle de versão passo a passo)
+| 02 | Afirmação incorreta sobre a licença do repositório de origem (`dcaribou/transfermarkt-datasets`). | O assistente afirmou incorretamente que o repositório utilizava a licença MIT. | Conferência da licença exibida no repositório de origem, com auxílio de outro assistente, seguida de revisão pelo usuário. | Correção imediata no README, registrando que tanto o Kaggle quanto o repositório no GitHub declaram CC0-1.0. |
